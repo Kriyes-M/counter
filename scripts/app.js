@@ -3,16 +3,23 @@ const decreaseButton = document.getElementsByClassName('js-decrease-button')[0];
 const resetButton = document.querySelector('.js-reset-button');
 const increaseButton = document.querySelectorAll('.js-increase-button')[0];
 
+let value = 0;
+
 function increaseValue() {
-  counterText.innerText = String(Number(counterText.innerText) + 1);
+  value++;
+  // counterText.innerText = String(Number(counterText.innerText) + 1);
+  counterText.innerText = value;
 }
 
-function decreaseValue() {
-  counterText.innerText = String(Number(counterText.innerText) - 1);
+function decreaseValue(num) {
+  value--;
+  // counterText.innerText = String(Number(counterText.innerText) - 1);
+  counterText.innerText = value;
 }
 
 function resetValue() {
-  counterText.innerText = '0';
+  value = 0;
+  counterText.innerText = value;
 }
 
 // event listeners
